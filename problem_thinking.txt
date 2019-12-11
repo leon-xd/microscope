@@ -1,0 +1,30 @@
+Two approaches for problem 1:
+    1. array of rows, fill in first with how many black rows, next with how many
+    white rows, etc. Last black row is not included.
+    
+    2. array of rows, fill in each row with pixels that contain a "border", or
+    any white pixels that are in contact with a black pixel.
+    
+    3. array of coordinates for each "first" white row. If a white pixel is in
+    contact with a black pixel it is included.
+
+    4. int starting index, linked list w/ how border follows 
+        if flat side of node is next to a black node, guide 
+
+Radius of parasite has to be at least 28,210 pixels
+Circumference has to be at least 177,250 pixels, more b/c made of squares, greater b/c not perfectly 
+
+
+Space approximations:
+    1. 1 main pointer, leading to 100,000 pointers, leading to approximately
+    100,000 integers (half rows are filled up, those each have 2 ints each in
+    them)
+    
+    2. 1 main pointer, leading to 100,000 pointers, leading to approximately
+    250,000 integers 
+
+    3. 250,000 pairs of integers = 500,000 integers
+
+Object where you have starting coordinates, then array of unsigned chars
+
+Problem 4: create map w/ row nums & coords
